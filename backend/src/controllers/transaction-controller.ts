@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', (_, res) => {
   const flaggedTransactions = transactionService.getFlagged();
-  const sortedTransactions = flaggedTransactions.sort((a, b) => b.updatedAt - a.updatedAt);
+  const sortedTransactions = flaggedTransactions.sort((a, b) => b.createdAt - a.createdAt);
 
   res.status(200).json({
     status: 200,

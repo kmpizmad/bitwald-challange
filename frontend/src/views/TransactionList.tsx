@@ -2,13 +2,17 @@
 
 import { CheckIcon, FlagIcon, EyeIcon } from 'lucide-react';
 
-import { useTransactions } from '@/hooks/useTransactions';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
+import { useTransactions } from '@/hooks/useTransactions';
+import { useUpdateTransaction } from '@/hooks/useUpdateTransaction';
+
 export function TransactionList() {
   const { data, isLoading } = useTransactions();
+  const { mutate: flagTransaction } = useUpdateTransaction('flag');
+  const { mutate: allowTransaction } = useUpdateTransaction('allow');
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -16,10 +20,11 @@ export function TransactionList() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-5 px-3 py-2 text-2xl font-bold border-b border-gray-200 place-items-center">
+      <div className="grid grid-cols-6 px-3 py-2 text-2xl font-bold border-b border-gray-200 place-items-center">
         <div>TIMESTAMP</div>
         <div>TRX ID</div>
         <div>AMOUNT</div>
+        <div>DESCRIPTION</div>
         <div>STATUS</div>
         <div>ACTIONS</div>
       </div>
@@ -27,13 +32,14 @@ export function TransactionList() {
         return (
           <div
             key={`transaction-${trx.id}`}
-            className="grid grid-cols-5 px-3 py-2 border-b border-gray-200 place-items-center"
+            className="grid grid-cols-6 px-3 py-2 border-b border-gray-200 place-items-center"
           >
-            <div>{new Date(trx.updatedAt).toLocaleString()}</div>
+            <div>{new Date(trx.createdAt).toLocaleString()}</div>
             <div>TRX-{trx.id.toString().padStart(4, '0')}</div>
             <div>
               {trx.amount} {trx.currency}
             </div>
+            <div className="w-full truncate">{trx.description}</div>
             <div>
               <Badge
                 variant="outline"
@@ -46,10 +52,20 @@ export function TransactionList() {
               <Button variant="outline" size="icon">
                 <EyeIcon className="w-4 h-4" />
               </Button>
-              <Button variant="default" size="icon" className="bg-green-600 hover:bg-emerald-700">
+              <Button
+                variant="default"
+                size="icon"
+                className="bg-green-600 hover:bg-emerald-700"
+                onClick={() => allowTransaction({ id: trx.id })}
+              >
                 <CheckIcon className="w-4 h-4" />
               </Button>
-              <Button variant="destructive" size="icon" className="bg-rose-600 hover:bg-red-700">
+              <Button
+                variant="destructive"
+                size="icon"
+                className="bg-rose-600 hover:bg-red-700"
+                onClick={() => flagTransaction({ id: trx.id })}
+              >
                 <FlagIcon className="w-4 h-4" />
               </Button>
             </div>

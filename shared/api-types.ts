@@ -18,6 +18,7 @@ export type Transaction<Comment extends number | TransactionComment = Transactio
   status: TransactionStatus;
   amount: number;
   currency: string;
+  description: string;
   comments: Comment[];
   createdAt: number;
   updatedAt: number;

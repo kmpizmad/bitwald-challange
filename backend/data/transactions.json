@@ -9,6 +9,7 @@
         "status": "allowed",
         "amount": 100,
         "currency": "USD",
+        "description": "Monthly subscription payment for premium service. Regular recurring transaction processed successfully.",
         "comments": [
           1
         ],
@@ -20,6 +21,7 @@
         "status": "flagged",
         "amount": 200,
         "currency": "USD",
+        "description": "Unusual transaction amount detected for this merchant. Requires additional verification.",
         "comments": [
           2
         ],
@@ -31,6 +33,7 @@
         "status": "allowed",
         "amount": 1500,
         "currency": "EUR",
+        "description": "International business transaction for consulting services. All necessary documentation provided.",
         "comments": [],
         "createdAt": 1706745600,
         "updatedAt": 1706745600
@@ -40,6 +43,7 @@
         "status": "flagged",
         "amount": 5000,
         "currency": "GBP",
+        "description": "Large transfer to overseas account. Additional security checks required due to amount.",
         "comments": [
           3
         ],
@@ -51,6 +55,7 @@
         "status": "allowed",
         "amount": 750,
         "currency": "USD",
+        "description": "Payment for quarterly software license renewal. Standard business expense.",
         "comments": [],
         "createdAt": 1711929600,
         "updatedAt": 1711929600
@@ -60,6 +65,7 @@
         "status": "flagged",
         "amount": 3000,
         "currency": "EUR",
+        "description": "Suspicious transaction from new location. IP address not recognized.",
         "comments": [
           4
         ],
@@ -71,6 +77,7 @@
         "status": "allowed",
         "amount": 2500,
         "currency": "GBP",
+        "description": "Payment for annual service contract. All terms and conditions met.",
         "comments": [],
         "createdAt": 1717200000,
         "updatedAt": 1717200000
@@ -80,6 +87,7 @@
         "status": "flagged",
         "amount": 1200,
         "currency": "USD",
+        "description": "Multiple failed attempts detected before successful transaction. Security review initiated.",
         "comments": [
           5
         ],
@@ -91,6 +99,7 @@
         "status": "allowed",
         "amount": 800,
         "currency": "EUR",
+        "description": "Payment for professional development course. Standard educational expense.",
         "comments": [],
         "createdAt": 1722470400,
         "updatedAt": 1722470400
@@ -100,6 +109,7 @@
         "status": "flagged",
         "amount": 4500,
         "currency": "GBP",
+        "description": "Large withdrawal request from new device. Additional verification needed.",
         "comments": [],
         "createdAt": 1725062400,
         "updatedAt": 1725062400
@@ -109,6 +119,7 @@
         "status": "allowed",
         "amount": 950,
         "currency": "USD",
+        "description": "Payment for cloud storage services. Regular monthly business expense.",
         "comments": [],
         "createdAt": 1727740800,
         "updatedAt": 1727740800
@@ -118,6 +129,7 @@
         "status": "flagged",
         "amount": 1800,
         "currency": "EUR",
+        "description": "Transaction during unusual business hours. Pattern deviation detected.",
         "comments": [
           6
         ],
@@ -129,6 +141,7 @@
         "status": "allowed",
         "amount": 3500,
         "currency": "GBP",
+        "description": "Payment for annual software maintenance. Standard business renewal.",
         "comments": [],
         "createdAt": 1733011200,
         "updatedAt": 1733011200
@@ -138,6 +151,7 @@
         "status": "flagged",
         "amount": 1500,
         "currency": "USD",
+        "description": "Unusual transaction pattern detected. Account holder verification required.",
         "comments": [],
         "createdAt": 1735603200,
         "updatedAt": 1735603200
@@ -147,6 +161,7 @@
         "status": "allowed",
         "amount": 2200,
         "currency": "EUR",
+        "description": "Express processing requested for urgent business payment. Priority handling approved.",
         "comments": [
           7
         ],
@@ -158,6 +173,7 @@
         "status": "flagged",
         "amount": 6000,
         "currency": "GBP",
+        "description": "Transaction exceeds daily limit. Requires manager approval.",
         "comments": [],
         "createdAt": 1740873600,
         "updatedAt": 1740873600
@@ -167,6 +183,7 @@
         "status": "allowed",
         "amount": 850,
         "currency": "USD",
+        "description": "Payment for domain renewal services. Standard annual business expense.",
         "comments": [],
         "createdAt": 1743552000,
         "updatedAt": 1743552000
@@ -176,6 +193,7 @@
         "status": "flagged",
         "amount": 2800,
         "currency": "EUR",
+        "description": "Transaction exceeds daily limit. Additional verification required.",
         "comments": [
           8
         ],
@@ -184,23 +202,25 @@
       },
       {
         "id": 19,
-        "status": "flagged",
+        "status": "allowed",
         "amount": 4200,
         "currency": "GBP",
+        "description": "Large transfer to new recipient. Security check required.",
         "comments": [
           9
         ],
         "createdAt": 1748822400,
-        "updatedAt": 1746631459044
+        "updatedAt": 1746652468863
       },
       {
         "id": 20,
-        "status": "flagged",
+        "status": "allowed",
         "amount": 1100,
         "currency": "USD",
+        "description": "Unusual transaction pattern detected. Account verification needed.",
         "comments": [],
         "createdAt": 1751414400,
-        "updatedAt": 1751414400
+        "updatedAt": 1746652438156
       }
     ]
   },
