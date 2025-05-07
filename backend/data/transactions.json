@@ -1,0 +1,268 @@
+{
+  "transactions": {
+    "_meta": {
+      "lastIndex": 20
+    },
+    "rows": [
+      {
+        "id": 1,
+        "status": "allowed",
+        "amount": 100,
+        "currency": "USD",
+        "comments": [
+          1
+        ],
+        "createdAt": 1651372800,
+        "updatedAt": 1651372800
+      },
+      {
+        "id": 2,
+        "status": "flagged",
+        "amount": 200,
+        "currency": "USD",
+        "comments": [
+          2
+        ],
+        "createdAt": 1704067200,
+        "updatedAt": 1704067200
+      },
+      {
+        "id": 3,
+        "status": "allowed",
+        "amount": 1500,
+        "currency": "EUR",
+        "comments": [],
+        "createdAt": 1706745600,
+        "updatedAt": 1706745600
+      },
+      {
+        "id": 4,
+        "status": "flagged",
+        "amount": 5000,
+        "currency": "GBP",
+        "comments": [
+          3
+        ],
+        "createdAt": 1709251200,
+        "updatedAt": 1709251200
+      },
+      {
+        "id": 5,
+        "status": "allowed",
+        "amount": 750,
+        "currency": "USD",
+        "comments": [],
+        "createdAt": 1711929600,
+        "updatedAt": 1711929600
+      },
+      {
+        "id": 6,
+        "status": "flagged",
+        "amount": 3000,
+        "currency": "EUR",
+        "comments": [
+          4
+        ],
+        "createdAt": 1714521600,
+        "updatedAt": 1714521600
+      },
+      {
+        "id": 7,
+        "status": "allowed",
+        "amount": 2500,
+        "currency": "GBP",
+        "comments": [],
+        "createdAt": 1717200000,
+        "updatedAt": 1717200000
+      },
+      {
+        "id": 8,
+        "status": "flagged",
+        "amount": 1200,
+        "currency": "USD",
+        "comments": [
+          5
+        ],
+        "createdAt": 1719792000,
+        "updatedAt": 1719792000
+      },
+      {
+        "id": 9,
+        "status": "allowed",
+        "amount": 800,
+        "currency": "EUR",
+        "comments": [],
+        "createdAt": 1722470400,
+        "updatedAt": 1722470400
+      },
+      {
+        "id": 10,
+        "status": "flagged",
+        "amount": 4500,
+        "currency": "GBP",
+        "comments": [],
+        "createdAt": 1725062400,
+        "updatedAt": 1725062400
+      },
+      {
+        "id": 11,
+        "status": "allowed",
+        "amount": 950,
+        "currency": "USD",
+        "comments": [],
+        "createdAt": 1727740800,
+        "updatedAt": 1727740800
+      },
+      {
+        "id": 12,
+        "status": "flagged",
+        "amount": 1800,
+        "currency": "EUR",
+        "comments": [
+          6
+        ],
+        "createdAt": 1730332800,
+        "updatedAt": 1730332800
+      },
+      {
+        "id": 13,
+        "status": "allowed",
+        "amount": 3500,
+        "currency": "GBP",
+        "comments": [],
+        "createdAt": 1733011200,
+        "updatedAt": 1733011200
+      },
+      {
+        "id": 14,
+        "status": "flagged",
+        "amount": 1500,
+        "currency": "USD",
+        "comments": [],
+        "createdAt": 1735603200,
+        "updatedAt": 1735603200
+      },
+      {
+        "id": 15,
+        "status": "allowed",
+        "amount": 2200,
+        "currency": "EUR",
+        "comments": [
+          7
+        ],
+        "createdAt": 1738281600,
+        "updatedAt": 1738281600
+      },
+      {
+        "id": 16,
+        "status": "flagged",
+        "amount": 6000,
+        "currency": "GBP",
+        "comments": [],
+        "createdAt": 1740873600,
+        "updatedAt": 1740873600
+      },
+      {
+        "id": 17,
+        "status": "allowed",
+        "amount": 850,
+        "currency": "USD",
+        "comments": [],
+        "createdAt": 1743552000,
+        "updatedAt": 1743552000
+      },
+      {
+        "id": 18,
+        "status": "flagged",
+        "amount": 2800,
+        "currency": "EUR",
+        "comments": [
+          8
+        ],
+        "createdAt": 1746144000,
+        "updatedAt": 1746144000
+      },
+      {
+        "id": 19,
+        "status": "flagged",
+        "amount": 4200,
+        "currency": "GBP",
+        "comments": [
+          9
+        ],
+        "createdAt": 1748822400,
+        "updatedAt": 1746631459044
+      },
+      {
+        "id": 20,
+        "status": "flagged",
+        "amount": 1100,
+        "currency": "USD",
+        "comments": [],
+        "createdAt": 1751414400,
+        "updatedAt": 1751414400
+      }
+    ]
+  },
+  "comments": {
+    "_meta": {
+      "lastIndex": 9
+    },
+    "rows": [
+      {
+        "id": 1,
+        "comment": "Regular monthly subscription payment",
+        "createdAt": 1651372800,
+        "updatedAt": 1651372800
+      },
+      {
+        "id": 2,
+        "comment": "Unusual amount for this merchant",
+        "createdAt": 1704067200,
+        "updatedAt": 1704067200
+      },
+      {
+        "id": 3,
+        "comment": "Large transaction amount requires additional verification",
+        "createdAt": 1709251200,
+        "updatedAt": 1709251200
+      },
+      {
+        "id": 4,
+        "comment": "Transaction from new IP address",
+        "createdAt": 1714521600,
+        "updatedAt": 1714521600
+      },
+      {
+        "id": 5,
+        "comment": "Multiple failed attempts before success",
+        "createdAt": 1719792000,
+        "updatedAt": 1719792000
+      },
+      {
+        "id": 6,
+        "comment": "Unusual time of day for this merchant",
+        "createdAt": 1730332800,
+        "updatedAt": 1730332800
+      },
+      {
+        "id": 7,
+        "comment": "Customer requested expedited processing",
+        "createdAt": 1738281600,
+        "updatedAt": 1738281600
+      },
+      {
+        "id": 8,
+        "comment": "Transaction amount exceeds daily limit",
+        "createdAt": 1746144000,
+        "updatedAt": 1746144000
+      },
+      {
+        "id": 9,
+        "comment": "TEST",
+        "createdAt": 1746631444218,
+        "updatedAt": 1746631444218
+      }
+    ]
+  }
+}
