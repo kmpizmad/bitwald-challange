@@ -1,0 +1,61 @@
+'use client';
+
+import { CheckIcon, FlagIcon, EyeIcon } from 'lucide-react';
+
+import { useTransactions } from '@/hooks/useTransactions';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+
+export function TransactionList() {
+  const { data, isLoading } = useTransactions();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className="max-w-5xl mx-auto">
+      <div className="grid grid-cols-5 px-3 py-2 text-2xl font-bold border-b border-gray-200 place-items-center">
+        <div>TIMESTAMP</div>
+        <div>TRX ID</div>
+        <div>AMOUNT</div>
+        <div>STATUS</div>
+        <div>ACTIONS</div>
+      </div>
+      {data?.data?.map(trx => {
+        return (
+          <div
+            key={`transaction-${trx.id}`}
+            className="grid grid-cols-5 px-3 py-2 border-b border-gray-200 place-items-center"
+          >
+            <div>{new Date(trx.updatedAt).toLocaleString()}</div>
+            <div>TRX-{trx.id.toString().padStart(4, '0')}</div>
+            <div>
+              {trx.amount} {trx.currency}
+            </div>
+            <div>
+              <Badge
+                variant="outline"
+                className={cn('text-gray-900 border-0', `${trx.status === 'approved' ? 'bg-green-300' : 'bg-red-300'}`)}
+              >
+                {trx.status}
+              </Badge>
+            </div>
+            <div className="flex gap-2">
+              <Button variant="outline" size="icon">
+                <EyeIcon className="w-4 h-4" />
+              </Button>
+              <Button variant="default" size="icon" className="bg-green-600 hover:bg-emerald-700">
+                <CheckIcon className="w-4 h-4" />
+              </Button>
+              <Button variant="destructive" size="icon" className="bg-rose-600 hover:bg-red-700">
+                <FlagIcon className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
