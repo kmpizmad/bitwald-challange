@@ -1,6 +1,9 @@
 'use client';
 
 import { useMemo, useRef } from 'react';
+import { ArrowLeftIcon } from 'lucide-react';
+
+import { useRouter } from 'next/navigation';
 
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
@@ -12,6 +15,7 @@ import { useUpdateTransaction } from '@/hooks/useUpdateTransaction';
 export function TransactionDetails({ id }: { id: number }) {
   const commentRef = useRef<HTMLTextAreaElement>(null);
 
+  const router = useRouter();
   const { data } = useTransactions();
   const { mutate: addComment } = useUpdateTransaction('comment');
 
@@ -23,6 +27,10 @@ export function TransactionDetails({ id }: { id: number }) {
 
   return (
     <div className="px-8 py-6 mx-auto space-y-1 max-w-7xl">
+      <Button variant="link" className="mb-6" onClick={() => router.back()}>
+        <ArrowLeftIcon className="w-4 h-4" />
+        Go back
+      </Button>
       <div>
         <div className="flex items-center gap-2">
           <div className="font-bold">ID:</div>
