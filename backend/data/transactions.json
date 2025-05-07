@@ -195,7 +195,9 @@
         "currency": "EUR",
         "description": "Transaction exceeds daily limit. Additional verification required.",
         "comments": [
-          8
+          8,
+          10,
+          11
         ],
         "createdAt": 1746144000,
         "updatedAt": 1746144000
@@ -226,7 +228,7 @@
   },
   "comments": {
     "_meta": {
-      "lastIndex": 9
+      "lastIndex": 11
     },
     "rows": [
       {
@@ -282,6 +284,18 @@
         "comment": "TEST",
         "createdAt": 1746631444218,
         "updatedAt": 1746631444218
+      },
+      {
+        "id": 10,
+        "comment": "TEST COMMENT",
+        "createdAt": 1746654412504,
+        "updatedAt": 1746654412504
+      },
+      {
+        "id": 11,
+        "comment": "TEST COMMENT 22",
+        "createdAt": 1746654473302,
+        "updatedAt": 1746654473302
       }
     ]
   }

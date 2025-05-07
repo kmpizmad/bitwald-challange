@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { CheckIcon, FlagIcon, EyeIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,8 @@ import { useTransactions } from '@/hooks/useTransactions';
 import { useUpdateTransaction } from '@/hooks/useUpdateTransaction';
 
 export function TransactionList() {
+  const router = useRouter();
+
   const { data, isLoading } = useTransactions();
   const { mutate: flagTransaction } = useUpdateTransaction('flag');
   const { mutate: allowTransaction } = useUpdateTransaction('allow');
@@ -19,12 +22,13 @@ export function TransactionList() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-6 px-3 py-2 text-2xl font-bold border-b border-gray-200 place-items-center">
+    <div className="mx-auto max-w-7xl">
+      <div className="grid grid-cols-7 px-3 py-2 text-2xl font-bold border-b border-gray-200 place-items-center">
         <div>TIMESTAMP</div>
         <div>TRX ID</div>
         <div>AMOUNT</div>
         <div>DESCRIPTION</div>
+        <div>COMMENTS</div>
         <div>STATUS</div>
         <div>ACTIONS</div>
       </div>
@@ -32,7 +36,7 @@ export function TransactionList() {
         return (
           <div
             key={`transaction-${trx.id}`}
-            className="grid grid-cols-6 px-3 py-2 border-b border-gray-200 place-items-center"
+            className="grid grid-cols-7 px-3 py-2 border-b border-gray-200 place-items-center"
           >
             <div>{new Date(trx.createdAt).toLocaleString()}</div>
             <div>TRX-{trx.id.toString().padStart(4, '0')}</div>
@@ -40,6 +44,7 @@ export function TransactionList() {
               {trx.amount} {trx.currency}
             </div>
             <div className="w-full truncate">{trx.description}</div>
+            <div>{trx.comments.length}</div>
             <div>
               <Badge
                 variant="outline"
@@ -49,7 +54,7 @@ export function TransactionList() {
               </Badge>
             </div>
             <div className="flex gap-2">
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" onClick={() => router.push(`/details/${trx.id}`)}>
                 <EyeIcon className="w-4 h-4" />
               </Button>
               <Button
