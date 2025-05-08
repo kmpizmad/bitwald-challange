@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={cn('antialiased min-h-dvh flex items-center justify-center', sans.className)}>
+      <body className={cn('antialiased min-h-dvh', sans.className)}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
